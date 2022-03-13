@@ -15,21 +15,23 @@ let playRound = (playerSelection, computerSelection) => {
     let winner;
     if (playerSelection == computerSelection) {
         winner = 'It is a tie!';
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        winner = 'Computer Wins!';
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        winner = 'Computer wins!';
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        winner = 'Player Wins!';
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        winner = 'Player Wins!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         winner = 'Player Wins!'
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+        winner = 'Computer Wins!'
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        winner = 'Computer Wins!'
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        winner = 'Player Wins!'
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        winner = 'Player Wins!'
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+        winner = 'Computer Wins!'
     }
     return winner;
 };
 
-const playerSelection = 'rock';
+const playerSelection = prompt('Rock, Paper, Scissors... enter a choice...').toLowerCase();
 const computerSelection = computerPlay();
 
 console.log('Player played ' + playerSelection);
