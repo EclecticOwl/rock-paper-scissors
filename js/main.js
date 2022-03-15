@@ -32,7 +32,6 @@ total_score.textContent = 0
 
 
 
-
 let playRound = (playerSelection, computerSelection) => {
     let winner;
     if (playerSelection == computerSelection) {
@@ -103,11 +102,6 @@ function game(player) {
     }else {
         console.log(playRound(player, computer))
         totalgames++
-        console.log(`Current score is: \n
-            Player: ${playerScore}
-            Computer: ${computerScore}
-            Games: ${totalgames}
-            `)
     }
 }
 

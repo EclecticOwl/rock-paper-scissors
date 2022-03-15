@@ -57,3 +57,13 @@ body {
     align-items: center;
     gap: .5em;
 }
+.reset {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reset button {
+    padding: .5em 1.5em;
+    border-radius: .25em;
+}

@@ -5,6 +5,4 @@
 
 Rock, Paper, Scissors game
 
-Currently can only be played via the browser console. 
-
-Currently building out the UI portion. 
+Play everyones favorite three option game!
