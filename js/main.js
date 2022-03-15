@@ -10,27 +10,35 @@ const computerPlay = (choice) => {
     return choice;
 };
 
+let playerScore = 0; 
+let computerScore = 0;
+let totalgames = 0;
 
 let playRound = (playerSelection, computerSelection) => {
     let winner;
     if (playerSelection == computerSelection) {
         winner = 'It is a tie!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        winner = 'Player Wins!'
+        winner = 'Player Wins!';
+        playerScore++;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        winner = 'Computer Wins!'
+        winner = 'Computer Wins!';;
+        computerScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        winner = 'Computer Wins!'
+        winner = 'Computer Wins!';
+        computerScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        winner = 'Player Wins!'
+        winner = 'Player Wins!';
+        playerScore++;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        winner = 'Player Wins!'
+        winner = 'Player Wins!';
+        playerScore++;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        winner = 'Computer Wins!'
+        winner = 'Computer Wins!';
+        computerScore++;
     }
     return winner;
 };
-
 
 rock.addEventListener('click', () => {
     game("rock");
@@ -43,10 +51,31 @@ scissors.addEventListener('click', () => {
 });
 
 
+
 function game(player) {
 
-    let computer = computerPlay();
-    console.log(playRound(player, computer));
+    let computer = computerPlay()
+
+    if (totalgames >= 10) {
+        if ( playerScore > computerScore) {
+            console.log('Player Wins The Game!')
+        }else {
+            console.log('Computer Wins The Game!')
+        }
+    }else {
+        console.log(playRound(player, computer))
+        totalgames++
+        console.log(`Current score is: \n
+            Player: ${playerScore}
+            Computer: ${computerScore}
+            Games: ${totalgames}
+            `)
+    }
+
+
+    
+
+    // console.log(playRound(player, computer));
 }
 
 
