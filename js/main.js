@@ -43,26 +43,32 @@ let playRound = (playerSelection, computerSelection) => {
         winner = 'Player Wins!';
         p_score.textContent++;
         total_score.textContent++;
+        playerScore++;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         winner = 'Computer Wins!';;
         c_score.textContent++;
         total_score.textContent++;
+        computerScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
         winner = 'Computer Wins!';
         c_score.textContent++;
         total_score.textContent++;
+        computerScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         winner = 'Player Wins!';
         p_score.textContent++;
         total_score.textContent++;
+        playerScore++;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         winner = 'Player Wins!';
         p_score.textContent++;
         total_score.textContent++;
+        playerScore++
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         winner = 'Computer Wins!';
         c_score.textContent++;
         total_score.textContent++;
+        computerScore++;
     }
     return winner;
 };
