@@ -31,29 +31,23 @@ let playRound = (playerSelection, computerSelection) => {
     return winner;
 };
 
-let playerSelection;
-const computerSelection = computerPlay();
 
-let buttons = document.querySelectorAll('button')
-
-buttons.forEach(item => {
-    item.addEventListener('click', event => {
-        // console.log(event.target.innerText);
-        if (event.target.innerText == 'Rock') {
-            playerSelection = 'rock';
-        }else if (event.target.innerText == 'Paper') {
-            playerSelection = 'paper';
-        }else if (event.target.innerText == 'Scissors') {
-            playerSelection = 'scissors';
-        }
-    })
-})
+rock.addEventListener('click', () => {
+    game("rock");
+});
+paper.addEventListener('click', () => {
+    game("paper");
+});
+scissors.addEventListener('click', () => {
+    game("scissors");
+});
 
 
+function game(player) {
+
+    let computer = computerPlay();
+    console.log(playRound(player, computer));
+}
 
 
 
-
-// console.log('Player played ' + playerSelection);
-// console.log('Computer played ' + computerSelection);
-// console.log(playRound(playerSelection, computerSelection));
