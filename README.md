@@ -6,3 +6,5 @@
 Rock, Paper, Scissors game
 
 Play everyones favorite three option game!
+
+![screen-gif](./readme_gif.gif)
