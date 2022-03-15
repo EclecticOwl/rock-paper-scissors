@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/background.jpg');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    background-color: rgba(235, 235, 235, 0.74);
+    color: rgb(59, 58, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: .25em;
+    width: 310px;
+}
+.options {
+    display: flex;
+    gap: 1em;
+}
+.options button {
+    border-radius: .4em;
+    padding: .5em 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.score p {
+    margin-top: .5em;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#total-score {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
