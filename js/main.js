@@ -31,9 +31,29 @@ let playRound = (playerSelection, computerSelection) => {
     return winner;
 };
 
-const playerSelection = prompt('Rock, Paper, Scissors... enter a choice...').toLowerCase();
+let playerSelection;
 const computerSelection = computerPlay();
 
-console.log('Player played ' + playerSelection);
-console.log('Computer played ' + computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+let buttons = document.querySelectorAll('button')
+
+buttons.forEach(item => {
+    item.addEventListener('click', event => {
+        // console.log(event.target.innerText);
+        if (event.target.innerText == 'Rock') {
+            playerSelection = 'rock';
+        }else if (event.target.innerText == 'Paper') {
+            playerSelection = 'paper';
+        }else if (event.target.innerText == 'Scissors') {
+            playerSelection = 'scissors';
+        }
+    })
+})
+
+
+
+
+
+
+// console.log('Player played ' + playerSelection);
+// console.log('Computer played ' + computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
